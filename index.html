@@ -7,7 +7,7 @@
 <title>Alberta Kudedor | Data Analyst</title>
 
 <meta name="description"
-content="Portfolio of Alberta Kudedor, Data Analyst with experience in business operations, customer analytics, Excel, SQL, Power BI and Python.">
+content="Alberta Kudedor - Data Analyst specialising in Business Intelligence, Customer Analytics and Operations Analytics.">
 
 <style>
 
@@ -27,13 +27,14 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+    background: #f8fafc;
     color: #263238;
-    background: #f7f9fb;
+    line-height: 1.6;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 img {
@@ -42,9 +43,8 @@ img {
 }
 
 .container {
-    max-width: 1100px;
+    width: min(1120px, 92%);
     margin: auto;
-    padding: 0 25px;
 }
 
 
@@ -56,38 +56,41 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e7edf1;
+}
 
-    background: #ffffff;
-
-    padding: 16px 6%;
+.nav-container {
+    width: min(1120px, 92%);
+    margin: auto;
+    min-height: 70px;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
-
-    box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+    justify-content: space-between;
 }
 
 .logo {
-    font-size: 21px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 800;
     color: #123b5d;
 }
 
-nav ul {
+.nav-links {
     display: flex;
+    gap: 28px;
     list-style: none;
-    gap: 25px;
 }
 
-nav ul li a {
-    color: #37474f;
+.nav-links a {
     font-size: 14px;
     font-weight: 600;
-    transition: 0.3s;
+    color: #455a64;
+    transition: 0.25s;
 }
 
-nav ul li a:hover {
+.nav-links a:hover {
     color: #087f8c;
 }
 
@@ -97,98 +100,128 @@ nav ul li a:hover {
 ========================= */
 
 .hero {
-    background: linear-gradient(135deg, #123b5d, #087f8c);
-    color: white;
-    min-height: 78vh;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(255,255,255,.12), transparent 25%),
+        linear-gradient(135deg, #102f4a, #087f8c);
 
-    display: flex;
-    align-items: center;
+    color: white;
 }
 
-.hero-content {
-    max-width: 1100px;
-    width: 100%;
-    margin: auto;
-    padding: 80px 25px;
+.hero-container {
+    min-height: 690px;
 
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 60px;
+    grid-template-columns: 1.4fr .8fr;
     align-items: center;
+    gap: 70px;
+
+    padding: 80px 0;
 }
 
-.hero-text h4 {
-    font-size: 15px;
+.eyebrow {
+    font-size: 13px;
     letter-spacing: 2px;
-    margin-bottom: 12px;
-}
-
-.hero-text h1 {
-    font-size: 54px;
-    line-height: 1.1;
+    font-weight: 700;
     margin-bottom: 15px;
+    opacity: .85;
 }
 
-.hero-text h2 {
-    font-size: 24px;
-    font-weight: 400;
+.hero h1 {
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.05;
     margin-bottom: 20px;
 }
 
-.hero-text p {
-    font-size: 17px;
+.hero h2 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.hero-description {
     max-width: 650px;
-    margin-bottom: 28px;
+    font-size: 17px;
+    color: rgba(255,255,255,.9);
+    margin-bottom: 30px;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 12px;
     flex-wrap: wrap;
+    gap: 12px;
 }
 
-.button {
-    display: inline-block;
-    padding: 12px 22px;
+.btn {
+    padding: 12px 20px;
     border-radius: 6px;
-    font-weight: 700;
     font-size: 14px;
-    transition: 0.3s;
+    font-weight: 700;
+    transition: .25s;
 }
 
-.button-primary {
+.btn-primary {
     background: white;
     color: #123b5d;
 }
 
-.button-outline {
-    border: 1px solid white;
+.btn-outline {
+    border: 1px solid rgba(255,255,255,.7);
     color: white;
 }
 
-.button:hover {
+.btn:hover {
     transform: translateY(-2px);
 }
 
-.button-outline:hover {
-    background: white;
-    color: #123b5d;
-}
-
-.profile-container {
+.profile-wrap {
     display: flex;
     justify-content: center;
 }
 
 .profile-image {
-    width: 270px;
-    height: 270px;
-    border-radius: 50%;
+    width: 280px;
+    height: 280px;
     object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid rgba(255,255,255,.85);
+    box-shadow: 0 20px 50px rgba(0,0,0,.25);
+}
 
-    border: 6px solid rgba(255,255,255,0.85);
 
-    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+/* =========================
+   STATS
+========================= */
+
+.stats {
+    background: white;
+    border-bottom: 1px solid #e5ebef;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.stat {
+    padding: 30px 20px;
+    text-align: center;
+    border-right: 1px solid #e5ebef;
+}
+
+.stat:last-child {
+    border-right: none;
+}
+
+.stat strong {
+    display: block;
+    font-size: 30px;
+    color: #123b5d;
+}
+
+.stat span {
+    font-size: 13px;
+    color: #607d8b;
 }
 
 
@@ -197,59 +230,71 @@ nav ul li a:hover {
 ========================= */
 
 section {
-    padding: 80px 0;
+    padding: 90px 0;
 }
 
-.section-title {
-    text-align: center;
+.section-heading {
+    max-width: 720px;
     margin-bottom: 45px;
 }
 
-.section-title h2 {
-    color: #123b5d;
-    font-size: 32px;
-    margin-bottom: 8px;
+.section-label {
+    color: #087f8c;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 10px;
 }
 
-.section-title p {
+.section-heading h2 {
+    font-size: 38px;
+    line-height: 1.15;
+    color: #123b5d;
+    margin-bottom: 12px;
+}
+
+.section-heading p {
     color: #607d8b;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 
 /* =========================
-   ABOUT
+   ABOUT / VALUE
 ========================= */
+
+.about {
+    background: #fff;
+}
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1.3fr 0.7fr;
-    gap: 40px;
-}
-
-.about-text {
-    font-size: 16px;
+    grid-template-columns: 1.25fr .75fr;
+    gap: 50px;
+    align-items: start;
 }
 
 .about-text p {
     margin-bottom: 18px;
+    font-size: 16px;
+    color: #455a64;
 }
 
-.about-highlight {
-    background: white;
-    padding: 28px;
-    border-radius: 10px;
+.value-box {
+    background: #f1f7f8;
     border-left: 4px solid #087f8c;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    padding: 28px;
+    border-radius: 8px;
 }
 
-.about-highlight h3 {
+.value-box h3 {
     color: #123b5d;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
-.focus-item {
-    margin-bottom: 10px;
+.value-item {
+    margin-bottom: 12px;
     font-size: 14px;
 }
 
@@ -258,39 +303,55 @@ section {
    SKILLS
 ========================= */
 
+.skills {
+    background: #f4f7f9;
+}
+
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 20px;
 }
 
 .skill-card {
     background: white;
-    padding: 25px;
+    padding: 28px;
     border-radius: 10px;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.06);
     border-top: 3px solid #087f8c;
+    box-shadow: 0 8px 25px rgba(20,50,70,.06);
+}
+
+.skill-number {
+    font-size: 12px;
+    font-weight: 800;
+    color: #087f8c;
+    margin-bottom: 12px;
 }
 
 .skill-card h3 {
     color: #123b5d;
-    font-size: 18px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-.skill-list {
+.skill-card p {
+    color: #607d8b;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 7px;
 }
 
-.skill {
-    background: #eef5f7;
+.tag {
+    background: #edf5f6;
     color: #123b5d;
-    padding: 7px 11px;
-    border-radius: 5px;
-    font-size: 13px;
-    font-weight: 600;
+    padding: 6px 9px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
 }
 
 
@@ -298,25 +359,56 @@ section {
    PROJECTS
 ========================= */
 
-#projects {
-    background: #eef4f7;
+.projects {
+    background: white;
 }
 
 .project {
-    background: white;
+    background: #f8fafb;
+    border: 1px solid #e3eaee;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
     margin-bottom: 30px;
 }
 
-.project-content {
-    padding: 30px;
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 12px;
+    padding: 15px;
+}
+
+.project-gallery img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: .3s;
+    border: 1px solid #dbe4e8;
+}
+
+.project-gallery img:hover {
+    transform: scale(1.015);
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+}
+
+.project-body {
+    padding: 35px;
+}
+
+.project-label {
+    color: #087f8c;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
 }
 
 .project h3 {
     color: #123b5d;
-    font-size: 23px;
+    font-size: 28px;
     margin-bottom: 8px;
 }
 
@@ -324,95 +416,80 @@ section {
     color: #087f8c;
     font-weight: 700;
     font-size: 13px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
-.project p {
-    font-size: 15px;
+.project-body p {
     color: #455a64;
-    margin-bottom: 14px;
+    margin-bottom: 15px;
 }
 
-.project ul {
-    margin: 10px 0 20px 20px;
+.project-list {
+    margin: 15px 0 25px 20px;
     color: #455a64;
-    font-size: 14px;
 }
 
-.project li {
+.project-list li {
     margin-bottom: 7px;
 }
-
-
-/* =========================
-   DASHBOARD GALLERY
-========================= */
-
-.dashboard-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-    padding: 25px 30px 10px;
-}
-
-.dashboard-gallery img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-
-    border-radius: 8px;
-    border: 1px solid #dce5e8;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.dashboard-gallery img:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.gallery-caption {
-    text-align: center;
-    color: #607d8b;
-    font-size: 13px;
-    padding: 5px 20px 10px;
-}
-
-
-/* =========================
-   PROJECT BUTTONS
-========================= */
 
 .project-buttons {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    margin-top: 20px;
 }
 
-.project-button {
-    display: inline-block;
-    padding: 9px 15px;
-    border-radius: 5px;
-
+.project-btn {
     background: #123b5d;
     color: white;
-
-    font-size: 12px;
+    padding: 10px 16px;
+    border-radius: 5px;
+    font-size: 13px;
     font-weight: 700;
-
-    transition: 0.3s;
 }
 
-.project-button:hover {
-    background: #087f8c;
-}
-
-.project-button.secondary {
-    background: #eef4f7;
+.project-btn.secondary {
+    background: #e8f1f3;
     color: #123b5d;
+}
+
+
+/* =========================
+   APPROACH
+========================= */
+
+.approach {
+    background: #f4f7f9;
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 18px;
+}
+
+.approach-card {
+    background: white;
+    padding: 25px;
+    border-radius: 9px;
+    box-shadow: 0 6px 20px rgba(20,50,70,.05);
+}
+
+.approach-number {
+    color: #087f8c;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.approach-card h3 {
+    color: #123b5d;
+    margin-bottom: 9px;
+}
+
+.approach-card p {
+    color: #607d8b;
+    font-size: 14px;
 }
 
 
@@ -420,25 +497,23 @@ section {
    EXPERIENCE
 ========================= */
 
-.experience-card {
+.experience {
     background: white;
+}
+
+.experience-card {
     max-width: 950px;
-    margin: auto;
-
-    padding: 30px;
-
-    border-radius: 10px;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-
+    background: #f8fafb;
     border-left: 4px solid #087f8c;
+    padding: 32px;
+    border-radius: 8px;
 }
 
 .experience-header {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .experience-header h3 {
@@ -458,7 +533,7 @@ section {
 
 .experience-card li {
     margin-bottom: 9px;
-    font-size: 15px;
+    color: #455a64;
 }
 
 
@@ -466,36 +541,30 @@ section {
    WHAT I BRING
 ========================= */
 
-.value-grid {
+.bring {
+    background: #f4f7f9;
+}
+
+.bring-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
     gap: 18px;
 }
 
-.value-card {
+.bring-card {
     background: white;
     padding: 25px;
-    text-align: center;
-    border-radius: 10px;
-
-    box-shadow: 0 5px 18px rgba(0,0,0,0.05);
-
-    transition: 0.3s;
+    border-radius: 9px;
 }
 
-.value-card:hover {
-    transform: translateY(-4px);
-}
-
-.value-card h3 {
+.bring-card h3 {
     color: #123b5d;
-    font-size: 17px;
     margin-bottom: 10px;
 }
 
-.value-card p {
+.bring-card p {
     color: #607d8b;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 
@@ -503,48 +572,49 @@ section {
    CONTACT
 ========================= */
 
-#contact {
-    background: #eef4f7;
-}
-
-.contact-box {
-    max-width: 750px;
-    margin: auto;
+.contact {
+    background: #123b5d;
+    color: white;
     text-align: center;
 }
 
-.contact-box > p {
-    margin-bottom: 25px;
-    color: #455a64;
+.contact .section-heading {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact .section-heading h2 {
+    color: white;
+}
+
+.contact .section-heading p {
+    color: rgba(255,255,255,.75);
+}
+
+.contact-text {
+    max-width: 700px;
+    margin: 0 auto 28px;
+    color: rgba(255,255,255,.85);
 }
 
 .contact-links {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 12px;
+    flex-wrap: wrap;
 }
 
-.contact-link {
-    display: inline-block;
-
+.contact-btn {
     background: white;
     color: #123b5d;
-
     padding: 12px 20px;
-
     border-radius: 6px;
-
-    font-weight: 700;
     font-size: 14px;
-
-    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
-
-    transition: 0.3s;
+    font-weight: 700;
+    transition: .25s;
 }
 
-.contact-link:hover {
-    color: #087f8c;
+.contact-btn:hover {
     transform: translateY(-2px);
 }
 
@@ -554,15 +624,15 @@ section {
 ========================= */
 
 footer {
-    background: #123b5d;
+    background: #0b2539;
     color: white;
     text-align: center;
-    padding: 28px 20px;
+    padding: 25px 15px;
 }
 
 footer p {
     font-size: 13px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 
@@ -572,21 +642,12 @@ footer p {
 
 .lightbox {
     display: none;
-
     position: fixed;
+    inset: 0;
     z-index: 2000;
-
-    left: 0;
-    top: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background: rgba(0,0,0,0.92);
-
+    background: rgba(0,0,0,.92);
     align-items: center;
     justify-content: center;
-
     padding: 30px;
 }
 
@@ -594,17 +655,14 @@ footer p {
     max-width: 95%;
     max-height: 90vh;
     object-fit: contain;
-    border-radius: 5px;
 }
 
-.close-lightbox {
+.close {
     position: absolute;
-    top: 15px;
+    top: 20px;
     right: 30px;
-
     color: white;
     font-size: 40px;
-
     cursor: pointer;
 }
 
@@ -613,25 +671,30 @@ footer p {
    MOBILE
 ========================= */
 
-@media (max-width: 850px) {
+@media(max-width:850px) {
 
-    nav {
+    .nav-container {
         flex-direction: column;
+        padding: 15px 0;
         gap: 12px;
     }
 
-    nav ul {
+    .nav-links {
         gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .hero-content {
+    .hero-container,
+    .about-grid {
         grid-template-columns: 1fr;
+    }
+
+    .hero-container {
         text-align: center;
     }
 
-    .hero-text p {
+    .hero-description {
         margin-left: auto;
         margin-right: auto;
     }
@@ -640,61 +703,41 @@ footer p {
         justify-content: center;
     }
 
-    .profile-container {
+    .profile-wrap {
         order: -1;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
     }
 
     .skills-grid {
         grid-template-columns: 1fr;
     }
 
-    .value-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .approach-grid {
+        grid-template-columns: repeat(2,1fr);
     }
 
-    .dashboard-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .dashboard-gallery img {
-        height: auto;
-    }
-
-    .experience-header {
-        flex-direction: column;
-        gap: 5px;
+    .bring-grid {
+        grid-template-columns: repeat(2,1fr);
     }
 }
 
 
-@media (max-width: 600px) {
-
-    .hero-text h1 {
-        font-size: 38px;
-    }
-
-    .hero-text h2 {
-        font-size: 20px;
-    }
-
-    .hero {
-        min-height: auto;
-    }
+@media(max-width:600px) {
 
     section {
-        padding: 60px 0;
+        padding: 65px 0;
     }
 
-    .section-title h2 {
-        font-size: 28px;
+    .hero-container {
+        min-height: auto;
+        padding: 70px 0;
     }
 
-    .value-grid {
-        grid-template-columns: 1fr;
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero h2 {
+        font-size: 19px;
     }
 
     .profile-image {
@@ -702,10 +745,48 @@ footer p {
         height: 210px;
     }
 
-    .project-content {
-        padding: 22px;
+    .stats-grid {
+        grid-template-columns: 1fr;
     }
 
+    .stat {
+        border-right: none;
+        border-bottom: 1px solid #e5ebef;
+    }
+
+    .stat:last-child {
+        border-bottom: none;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .project-gallery img {
+        height: auto;
+    }
+
+    .project-body {
+        padding: 25px;
+    }
+
+    .approach-grid,
+    .bring-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .experience-header span {
+        white-space: normal;
+    }
 }
 
 </style>
@@ -721,17 +802,22 @@ footer p {
 
 <nav>
 
-    <div class="logo">
-        Alberta Kudedor
-    </div>
+<div class="nav-container">
 
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+<div class="logo">
+Alberta Kudedor
+</div>
+
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#approach">Approach</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</div>
 
 </nav>
 
@@ -742,118 +828,174 @@ footer p {
 
 <header class="hero">
 
-    <div class="hero-content">
+<div class="container hero-container">
 
-        <div class="hero-text">
+<div>
 
-            <h4>HELLO, I'M</h4>
+<div class="eyebrow">
+DATA ANALYTICS • BUSINESS INTELLIGENCE • OPERATIONS
+</div>
 
-            <h1>Alberta Kudedor</h1>
+<h1>
+Turning business data into practical insights.
+</h1>
 
-            <h2>
-                Data Analyst | Business Intelligence |
-                Customer & Operations Analytics
-            </h2>
+<h2>
+Data Analyst | Business Intelligence |
+Customer & Operations Analytics
+</h2>
 
-            <p>
-                I combine business experience with data analytics to
-                uncover trends, solve problems and turn data into
-                clear insights that support better decisions.
-            </p>
+<p class="hero-description">
+I combine over six years of customer and operations experience
+with practical data analytics to understand business problems,
+uncover trends and turn data into clear insights that support
+better decisions.
+</p>
 
-            <div class="hero-buttons">
+<div class="hero-buttons">
 
-                <a href="#projects"
-                   class="button button-primary">
-                    View My Projects
-                </a>
+<a href="#projects" class="btn btn-primary">
+Explore My Work
+</a>
 
-                <a href="cv.pdf"
-                   class="button button-outline"
-                   download>
-                    Download CV
-                </a>
+<a href="#contact" class="btn btn-outline">
+Let's Connect
+</a>
 
-            </div>
+<a href="cv.pdf" class="btn btn-outline" download>
+Download CV
+</a>
 
-        </div>
+</div>
+
+</div>
 
 
-        <div class="profile-container">
+<div class="profile-wrap">
 
-            <!-- IMPORTANT:
-                 This file must be inside the images folder -->
+<img
+src="images/profile.jpg"
+alt="Alberta Kudedor"
+class="profile-image"
+>
 
-            <img src="./images/profile.jpg"
-                 alt="Alberta Kudedor"
-                 class="profile-image">
+</div>
 
-        </div>
-
-    </div>
+</div>
 
 </header>
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<section class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat">
+<strong>6+</strong>
+<span>Years of business experience</span>
+</div>
+
+<div class="stat">
+<strong>1,000+</strong>
+<span>Customer accounts managed</span>
+</div>
+
+<div class="stat">
+<strong>4+</strong>
+<span>Core analytics tools</span>
+</div>
+
+</div>
+
+</section>
 
 
 <!-- =========================
      ABOUT
 ========================= -->
 
-<section id="about">
+<section id="about" class="about">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-heading">
 
-            <h2>About Me</h2>
+<div class="section-label">
+My Value
+</div>
 
-            <p>
-                Business experience combined with practical data analytics
-            </p>
+<h2>
+Business understanding strengthened by analytics.
+</h2>
 
-        </div>
+<p>
+I bring practical business experience together with data analytics
+to understand not only what the numbers say, but why they matter.
+</p>
 
-
-        <div class="about-grid">
-
-            <div class="about-text">
-
-                <p>
-                    I am a customer and relationship management professional
-                    with over six years of experience managing 1,000+ customer
-                    accounts and supporting business operations.
-                </p>
-
-                <p>
-                    I am building my career in data analytics, with hands-on
-                    experience using Excel, SQL, Power BI and Python to clean
-                    data, analyze trends and create meaningful insights.
-                </p>
-
-                <p>
-                    I combine my understanding of customers and business
-                    operations with analytical skills to solve problems,
-                    improve processes and support data-driven decisions.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="about-highlight">
+<div class="about-grid">
 
-                <h3>My Focus</h3>
+<div class="about-text">
 
-                <div class="focus-item">📊 Data Analysis</div>
-                <div class="focus-item">📈 Business Intelligence</div>
-                <div class="focus-item">👥 Customer Analytics</div>
-                <div class="focus-item">⚙️ Operations Analytics</div>
-                <div class="focus-item">📋 Reporting & Dashboards</div>
+<p>
+I am a customer and relationship management professional with
+over six years of experience managing customer portfolios,
+monitoring account performance and supporting business operations.
+</p>
 
-            </div>
+<p>
+I am transitioning into data analytics with hands-on experience
+using Excel, SQL, Power BI and Python to clean data, explore trends,
+build dashboards and communicate insights.
+</p>
 
-        </div>
+<p>
+My business background helps me approach analytics from a practical
+perspective — starting with the business question, understanding
+the data and turning findings into useful information for decision-making.
+</p>
 
-    </div>
+</div>
+
+
+<div class="value-box">
+
+<h3>
+Areas I Focus On
+</h3>
+
+<div class="value-item">
+📊 Data Analysis
+</div>
+
+<div class="value-item">
+📈 Business Intelligence
+</div>
+
+<div class="value-item">
+👥 Customer Analytics
+</div>
+
+<div class="value-item">
+⚙️ Operations Analytics
+</div>
+
+<div class="value-item">
+📋 Reporting & Dashboards
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -862,77 +1004,109 @@ footer p {
      SKILLS
 ========================= -->
 
-<section id="skills">
+<section id="skills" class="skills">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-heading">
 
-            <h2>Skills & Tools</h2>
+<div class="section-label">
+Technical Toolkit
+</div>
 
-            <p>
-                Technical and business skills I use to solve problems with data
-            </p>
+<h2>
+Tools I use to solve business questions.
+</h2>
 
-        </div>
+<p>
+My toolkit covers data preparation, analysis, querying,
+visualisation and business reporting.
+</p>
 
-
-        <div class="skills-grid">
-
-
-            <div class="skill-card">
-
-                <h3>Data Analysis</h3>
-
-                <div class="skill-list">
-
-                    <span class="skill">Excel</span>
-                    <span class="skill">SQL</span>
-                    <span class="skill">Python</span>
-                    <span class="skill">Pandas</span>
-                    <span class="skill">Data Cleaning</span>
-
-                </div>
-
-            </div>
+</div>
 
 
-            <div class="skill-card">
-
-                <h3>Business Intelligence</h3>
-
-                <div class="skill-list">
-
-                    <span class="skill">Power BI</span>
-                    <span class="skill">Power Query</span>
-                    <span class="skill">Data Visualization</span>
-                    <span class="skill">Dashboard Development</span>
-
-                </div>
-
-            </div>
+<div class="skills-grid">
 
 
-            <div class="skill-card">
+<div class="skill-card">
 
-                <h3>Business Skills</h3>
+<div class="skill-number">
+01
+</div>
 
-                <div class="skill-list">
+<h3>
+Power BI
+</h3>
 
-                    <span class="skill">Business Analysis</span>
-                    <span class="skill">Customer Analytics</span>
-                    <span class="skill">Reporting</span>
-                    <span class="skill">Operations Analysis</span>
-                    <span class="skill">Problem Solving</span>
+<p>
+Dashboard development, data visualisation, KPIs,
+Power Query and business reporting.
+</p>
 
-                </div>
+<div class="tags">
+<span class="tag">Power BI</span>
+<span class="tag">Power Query</span>
+<span class="tag">DAX</span>
+<span class="tag">Dashboards</span>
+</div>
 
-            </div>
+</div>
 
 
-        </div>
+<div class="skill-card">
 
-    </div>
+<div class="skill-number">
+02
+</div>
+
+<h3>
+Excel
+</h3>
+
+<p>
+Data cleaning, formulas, pivot tables, validation,
+reporting and exploratory analysis.
+</p>
+
+<div class="tags">
+<span class="tag">Excel</span>
+<span class="tag">Pivot Tables</span>
+<span class="tag">Power Query</span>
+<span class="tag">Reporting</span>
+</div>
+
+</div>
+
+
+<div class="skill-card">
+
+<div class="skill-number">
+03
+</div>
+
+<h3>
+SQL & Python
+</h3>
+
+<p>
+Data querying, transformation, exploration and validation
+for practical analytical projects.
+</p>
+
+<div class="tags">
+<span class="tag">SQL</span>
+<span class="tag">MySQL</span>
+<span class="tag">Python</span>
+<span class="tag">Pandas</span>
+</div>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -941,146 +1115,249 @@ footer p {
      PROJECTS
 ========================= -->
 
-<section id="projects">
+<section id="projects" class="projects">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-heading">
 
-            <h2>Featured Project</h2>
+<div class="section-label">
+Selected Work
+</div>
 
-            <p>
-                A practical workforce analytics project demonstrating
-                my data analysis and visualization skills
-            </p>
+<h2>
+Workforce Intelligence & Organizational Performance
+</h2>
 
-        </div>
+<p>
+A workforce analytics project combining multiple datasets to
+understand workforce structure, compensation, education,
+employee wellbeing and performance.
+</p>
 
-
-        <div class="project">
-
-
-            <!-- =========================
-                 WORKFORCE DASHBOARDS
-            ========================= -->
-
-            <div class="dashboard-gallery">
-
-                <img
-                    src="./images/workforce-overview.png"
-                    alt="Workforce overview dashboard"
-                    onclick="openLightbox(this.src)"
-                >
-
-                <img
-                    src="./images/workforce-demographics.png"
-                    alt="Workforce demographics dashboard"
-                    onclick="openLightbox(this.src)"
-                >
-
-                <img
-                    src="./images/workforce-compensation.png"
-                    alt="Workforce compensation dashboard"
-                    onclick="openLightbox(this.src)"
-                >
-
-                <img
-                    src="./images/workforce-performance.png"
-                    alt="Workforce performance dashboard"
-                    onclick="openLightbox(this.src)"
-                >
-
-            </div>
+</div>
 
 
-            <p class="gallery-caption">
-                Click any dashboard image to view it in full size.
-            </p>
+<div class="project">
 
 
-            <div class="project-content">
+<div class="project-gallery">
 
-                <h3>
-                    Workforce Intelligence & Organizational Performance
-                </h3>
+<img
+src="images/workforce-overview.png"
+alt="Workforce overview dashboard"
+onclick="openLightbox(this.src)"
+>
 
-                <div class="project-tools">
-                    Excel • SQL • Python • Power BI
-                </div>
+<img
+src="images/workforce-demographics.png"
+alt="Workforce demographics dashboard"
+onclick="openLightbox(this.src)"
+>
 
+<img
+src="images/workforce-compensation.png"
+alt="Workforce compensation dashboard"
+onclick="openLightbox(this.src)"
+>
 
-                <p>
-                    Analyzed employee, education, finance, health and
-                    performance data to understand workforce trends,
-                    compensation, employee wellbeing and organizational
-                    performance.
-                </p>
+<img
+src="images/workforce-performance.png"
+alt="Workforce performance dashboard"
+onclick="openLightbox(this.src)"
+>
 
-
-                <p>
-                    <strong>Business Question:</strong>
-                    How do workforce characteristics, compensation,
-                    education and employee wellbeing relate to
-                    organizational performance?
-                </p>
-
-
-                <ul>
-
-                    <li>
-                        Cleaned and integrated multiple datasets.
-                    </li>
-
-                    <li>
-                        Used SQL to combine and analyze workforce data.
-                    </li>
-
-                    <li>
-                        Used Python for data exploration and validation.
-                    </li>
-
-                    <li>
-                        Created interactive Power BI dashboards.
-                    </li>
-
-                    <li>
-                        Identified workforce, compensation and
-                        performance trends.
-                    </li>
-
-                </ul>
+</div>
 
 
-                <div class="project-buttons">
+<div class="project-body">
 
-                    <!-- Replace # with your real project URL -->
+<div class="project-label">
+Data Analytics Capstone
+</div>
 
-                    <a href="#"
-                       class="project-button">
-                        GitHub
-                    </a>
+<h3>
+Workforce Intelligence & Organizational Performance
+</h3>
 
-                    <!-- Replace # with your real Power BI URL -->
+<div class="project-tools">
+Excel • SQL • Python • Power BI
+</div>
 
-                    <a href="#"
-                       class="project-button">
-                        View Dashboard
-                    </a>
+<p>
+I integrated employee, department, education, finance, health
+and performance data to explore workforce trends and identify
+relationships between employee characteristics and organizational
+performance.
+</p>
 
-                    <!-- Replace # when you create your case study -->
+<p>
+<strong>Business question:</strong>
+How do workforce characteristics, compensation, education and
+employee wellbeing relate to organizational performance?
+</p>
 
-                    <a href="#"
-                       class="project-button secondary">
-                        Case Study
-                    </a>
 
-                </div>
+<ul class="project-list">
 
-            </div>
+<li>
+Cleaned, validated and prepared multiple datasets for analysis.
+</li>
 
-        </div>
+<li>
+Used SQL to join and analyse workforce datasets.
+</li>
 
-    </div>
+<li>
+Used Python for data exploration and validation.
+</li>
+
+<li>
+Created Power BI dashboards to communicate key findings.
+</li>
+
+<li>
+Analysed workforce demographics, compensation and performance.
+</li>
+
+</ul>
+
+
+<div class="project-buttons">
+
+<a
+href="https://github.com/akudedor"
+target="_blank"
+class="project-btn">
+GitHub
+</a>
+
+<a
+href="#"
+class="project-btn secondary">
+View Dashboard
+</a>
+
+<a
+href="#"
+class="project-btn secondary">
+Case Study
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     APPROACH
+========================= -->
+
+<section id="approach" class="approach">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="section-label">
+My Approach
+</div>
+
+<h2>
+From business question to useful insight.
+</h2>
+
+<p>
+I use a structured analytical process to keep my work accurate,
+clear and connected to the original business problem.
+</p>
+
+</div>
+
+
+<div class="approach-grid">
+
+
+<div class="approach-card">
+
+<div class="approach-number">
+01
+</div>
+
+<h3>
+Ask
+</h3>
+
+<p>
+Understand the business question, objectives and decisions
+the analysis needs to support.
+</p>
+
+</div>
+
+
+<div class="approach-card">
+
+<div class="approach-number">
+02
+</div>
+
+<h3>
+Prepare
+</h3>
+
+<p>
+Collect, inspect, clean and validate the data before analysis.
+</p>
+
+</div>
+
+
+<div class="approach-card">
+
+<div class="approach-number">
+03
+</div>
+
+<h3>
+Analyse
+</h3>
+
+<p>
+Identify patterns, trends and relationships that answer the
+business question.
+</p>
+
+</div>
+
+
+<div class="approach-card">
+
+<div class="approach-number">
+04
+</div>
+
+<h3>
+Communicate
+</h3>
+
+<p>
+Present findings through clear dashboards, reports and
+practical recommendations.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -1089,26 +1366,76 @@ footer p {
      EXPERIENCE
 ========================= -->
 
-<section id="experience">
+<section id="experience" class="experience">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-heading">
+
+<div class="section-label">
+Professional Experience
+</div>
+
+<h2>
+Business experience behind the numbers.
+</h2>
+
+<p>
+My experience in customer relationship management and operations
+gives me practical insight into how businesses use information
+to monitor performance and solve problems.
+</p>
+
+</div>
 
 
-        </div>
+<div class="experience-card">
+
+<div class="experience-header">
+
+<h3>
+Relationship Officer — Bboxx Ghana Ltd
+</h3>
+
+<span>
+December 2019 – Present
+</span>
+
+</div>
 
 
-        <div class="experience-card">
+<ul>
 
-            <div class="experience-header">
+<li>
+Manage a portfolio of 1,000+ customers while monitoring account
+and payment performance.
+</li>
 
+<li>
+Use Excel-based tracking and reporting to monitor customer
+activity and portfolio performance.
+</li>
 
-            </ul>
+<li>
+Analyse customer information to identify payment issues and
+support targeted customer engagement.
+</li>
 
-        </div>
+<li>
+Work with internal teams to resolve customer and operational
+issues.
+</li>
 
-    </div>
+<li>
+Use performance information to support collection strategies,
+customer retention and portfolio management.
+</li>
+
+</ul>
+
+</div>
+
+</div>
 
 </section>
 
@@ -1117,73 +1444,90 @@ footer p {
      WHAT I BRING
 ========================= -->
 
-<section>
+<section class="bring">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-heading">
 
-            <h2>What I Bring</h2>
+<div class="section-label">
+What I Bring
+</div>
 
-            <p>
-                Experience, technical skills and business understanding
-            </p>
+<h2>
+More than technical skills.
+</h2>
 
-        </div>
+<p>
+I combine analytical thinking with practical business experience,
+problem solving and communication.
+</p>
 
-
-        <div class="value-grid">
-
-            <div class="value-card">
-
-                <h3>Business Experience</h3>
-
-                <p>
-                    6+ years of practical experience in customer
-                    relationship management and business operations.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="value-card">
-
-                <h3>Analytical Skills</h3>
-
-                <p>
-                    Hands-on experience with Excel, SQL, Power BI
-                    and Python.
-                </p>
-
-            </div>
+<div class="bring-grid">
 
 
-            <div class="value-card">
+<div class="bring-card">
 
-                <h3>Problem Solving</h3>
+<h3>
+Business Understanding
+</h3>
 
-                <p>
-                    Ability to turn business questions into useful
-                    analysis and practical insights.
-                </p>
+<p>
+Over six years of experience working with customers, accounts
+and business operations.
+</p>
 
-            </div>
+</div>
 
 
-            <div class="value-card">
+<div class="bring-card">
 
-                <h3>Communication</h3>
+<h3>
+Analytical Thinking
+</h3>
 
-                <p>
-                    Experience communicating with customers,
-                    colleagues and internal stakeholders.
-                </p>
+<p>
+Ability to turn business questions into structured analysis
+and meaningful insights.
+</p>
 
-            </div>
+</div>
 
-        </div>
 
-    </div>
+<div class="bring-card">
+
+<h3>
+Problem Solving
+</h3>
+
+<p>
+Experience identifying issues, investigating causes and
+supporting practical solutions.
+</p>
+
+</div>
+
+
+<div class="bring-card">
+
+<h3>
+Communication
+</h3>
+
+<p>
+Ability to explain information clearly to customers, colleagues
+and internal stakeholders.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -1192,69 +1536,66 @@ footer p {
      CONTACT
 ========================= -->
 
-<section id="contact">
+<section id="contact" class="contact">
 
-    <div class="container">
+<div class="container">
 
-        <div class="contact-box">
+<div class="section-heading">
 
-            <div class="section-title">
+<div class="section-label">
+Let's Connect
+</div>
 
-                <h2>Let's Connect</h2>
+<h2>
+Ready to turn data into clearer decisions?
+</h2>
 
-                <p>
-                    Open to opportunities and collaborations
-                </p>
+<p>
+I am open to opportunities in Data Analytics, Business Intelligence,
+Business Analysis, Reporting, Operations and Customer Analytics.
+</p>
 
-            </div>
-
-
-            <p>
-                I am interested in opportunities in Data Analytics,
-                Business Analysis, Business Intelligence, Reporting,
-                Operations and Customer Analytics.
-            </p>
+</div>
 
 
-            <div class="contact-links">
-
-                <!-- https://www.linkedin.com/in/alberta-kudedor/ -->
-
-                <a href="https://www.linkedin.com/in/alberta-kudedor/"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="contact-link">
-                    LinkedIn
-                </a>
+<p class="contact-text">
+If you are looking for someone who understands both business
+operations and data, I would be happy to connect.
+</p>
 
 
-                <a href="https://github.com/akudedor"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="contact-link">
-                    GitHub
-                </a>
+<div class="contact-links">
 
+<a
+href="https://www.linkedin.com/"
+target="_blank"
+class="contact-btn">
+LinkedIn
+</a>
 
-                <!-- mailto:akudedor@gmail.com -->
+<a
+href="https://github.com/akudedor"
+target="_blank"
+class="contact-btn">
+GitHub
+</a>
 
-                <a href="mailto:akudedor@gmail.com"
-                   class="contact-link">
-                    Email Me
-                </a>
+<a
+href="mailto:your.akudedor@gmail.com"
+class="contact-btn">
+Email Me
+</a>
 
+<a
+href="cv.pdf"
+download
+class="contact-btn">
+Download CV
+</a>
 
-                <a href="cv.pdf"
-                   class="contact-link"
-                   download>
-                    Download CV
-                </a>
+</div>
 
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
@@ -1265,52 +1606,55 @@ footer p {
 
 <footer>
 
-    <p>
-        © 2026 Alberta Kudedor
-    </p>
+<p>
+© 2026 Alberta Kudedor
+</p>
 
-    <p>
-        Data Analyst | Business Intelligence |
-        Customer & Operations Analytics
-    </p>
+<p>
+Business Understanding · Analytical Thinking · Clear Communication
+</p>
 
 </footer>
 
 
 <!-- =========================
-     IMAGE LIGHTBOX
+     LIGHTBOX
 ========================= -->
 
-<div class="lightbox"
-     id="lightbox"
-     onclick="closeLightbox()">
+<div
+class="lightbox"
+id="lightbox"
+onclick="closeLightbox()"
+>
 
-    <span class="close-lightbox">&times;</span>
+<span class="close">
+&times;
+</span>
 
-    <img id="lightbox-image"
-         src=""
-         alt="Enlarged dashboard">
+<img
+id="lightbox-image"
+src=""
+alt="Dashboard enlarged"
+>
 
 </div>
 
 
 <script>
 
-function openLightbox(imageSource) {
+function openLightbox(source) {
 
     document.getElementById("lightbox").style.display = "flex";
 
-    document.getElementById("lightbox-image").src = imageSource;
+    document.getElementById("lightbox-image").src = source;
 
 }
-
 
 function closeLightbox() {
 
     document.getElementById("lightbox").style.display = "none";
 
 }
-
 
 document.addEventListener("keydown", function(event) {
 
